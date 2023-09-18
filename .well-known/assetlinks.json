@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.issakaai.base",
+      "sha256_cert_fingerprints":
+        ["98:4A:25:7D:1C:90:42:EA:4A:5F:AD:DD:74:D5:89:B4:86:0A:E6:4D:E2:21:2C:B9:70:59:AD:6F:46:E6:9A:1F"]
+    }
+  }
+]
