@@ -1,17 +1,17 @@
 {
-"applinks": {
-    "apps": [],
-    	"details": [
-    		{
-        		"appID": "W9U87485JG.com.issakai.base",
-        		"paths": ["*"]
-    		}
-    	]
-},
-"activitycontinuation": {
-    "apps": ["W9U87485JG.com.issakai.base"]
-},
-"webcredentials": {
-    "apps": ["W9U87485JG.com.issakai.base"]
-}
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "W9U87485JG.com.issakai.base",
+                "paths": ["*"]
+            }
+        ]
+    },
+    "activitycontinuation": {
+        "apps": ["W9U87485JG.com.issakai.base"]
+    },
+    "webcredentials": {
+        "apps": ["W9U87485JG.com.issakai.base"]
+    }
 }
