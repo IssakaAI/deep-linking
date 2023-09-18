@@ -1,0 +1,11 @@
+{
+"applinks": {
+    "apps": [], // This have to be included
+    "details": [
+    {
+        "appID": "XXXXXXXXXX.negativeepsilon.deeplinking",
+        "paths": ["/deeplinking/*"]
+    }
+    ]
+}
+}
