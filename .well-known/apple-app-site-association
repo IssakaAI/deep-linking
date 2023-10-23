@@ -4,7 +4,7 @@
         "details": [
             {
                 "appID": "W9U87485JG.com.issakai.base",
-                "paths": ["*"]
+                "paths": ["/base/*"]
             }
         ]
     },
