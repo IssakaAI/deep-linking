@@ -21,17 +21,22 @@ body {
 .app-icon img {
     width: 80px;
     height: 80px;
+    border-radius: 15px; /* Rounded corners */
 }
 
 .app-description h1 {
     margin: 20px 0;
 }
 
-.app-store-button {
+.download-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.open-app {
+    margin-top: 20px;
 }
