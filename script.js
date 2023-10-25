@@ -4,6 +4,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     const isAndroid = /Android/.test(navigator.userAgent);
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const communityId = urlParams.get('communityId');
+
     if (isIOS) {
         downloadButton.textContent = 'Download on the App Store';
         downloadButton.href = 'https://apps.apple.com/app/id6444385260';
@@ -13,5 +16,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     } else {
         downloadButton.textContent = 'Download Now'; // Default for non-mobile devices
         downloadButton.href = '#';
+    }
+
+    if (communityId) {
+        openBase.href = 'base://' + communityId;
     }
 });
