@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     const downloadButton = document.querySelector('.download-button');
+    const openBase = document.querySelector('.open-base');
 
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     const isAndroid = /Android/.test(navigator.userAgent);
