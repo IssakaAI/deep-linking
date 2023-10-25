@@ -19,6 +19,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         downloadButton.href = '#';
     }
 
+    console.log(urlParams);
+    console.log(communityId);
+
     if (communityId) {
         openBase.href = 'base://' + communityId;
     } else {
