@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     if (communityId) {
-        openBase.href = 'base://' + communityId;
+        openBase.href = 'base://joinCommunity/' + communityId;
     } else {
         openBase.href = 'base://';
     }
