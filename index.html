@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base - Your DIgital Community Center</title>
+    <title>Base - Your Digital Community Center</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,9 +25,10 @@
             width: 90%;
         }
         .app-icon img {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             border-radius: 22px;
+            margin-bottom: 10px;
         }
         h1 {
             color: #333;
@@ -35,6 +36,7 @@
         }
         p {
             color: #666;
+            margin-top: 0;
             margin-bottom: 30px;
         }
         .button {
@@ -66,6 +68,12 @@
             font-size: 14px;
             color: #666;
         }
+        .download-options p {
+            margin-bottom: 5px;
+        }
+        .download-options .button {
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -80,7 +88,6 @@
             <a href="#" class="button secondary-button" id="downloadButton">Get Started</a>
         </div>
     </div>
-
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             const downloadButton = document.getElementById('downloadButton');
@@ -89,7 +96,6 @@
             const isAndroid = /Android/.test(navigator.userAgent);
             const urlParams = new URLSearchParams(window.location.search);
             const communityId = urlParams.get('communityId');
-
             if (isIOS) {
                 downloadButton.textContent = 'Download on the App Store';
                 downloadButton.href = 'https://apps.apple.com/app/id6444385260';
@@ -100,7 +106,6 @@
                 downloadButton.textContent = 'Download Base';
                 downloadButton.href = '#';
             }
-
             if (communityId) {
                 openBase.href = 'base://joinCommunity/' + communityId;
             } else {
