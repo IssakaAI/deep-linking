@@ -3,24 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Base - Your Community Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .app-icon img {
+            width: 120px;
+            height: 120px;
+            border-radius: 22px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .open-app {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .open-app a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="app-icon">
-            <!-- Insert your app icon here -->
-            <img src="icon.png" alt="App Icon">
+            <img src="icon.png" alt="Base App Icon">
         </div>
-        <div class="app-description">
-            <h1>Base</h1>
-            <p>Start by downloading the Base mobile app</p>
-            <a href="#" class="download-button"></a>
-        </div>
+        <h1>Welcome to Base</h1>
+        <p>Your ultimate community hub. Connect, share, and grow together.</p>
+        <a href="#" class="button" id="downloadButton">Get Started</a>
         <div class="open-app">
-            Have the app already? <a style="text-decoration:none" href="#" class="open-base">Open Base</a>
+            Already have Base? <a href="#" id="openBase">Open the app</a>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const downloadButton = document.getElementById('downloadButton');
+            const openBase = document.getElementById('openBase');
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const isAndroid = /Android/.test(navigator.userAgent);
+            const urlParams = new URLSearchParams(window.location.search);
+            const communityId = urlParams.get('communityId');
+
+            if (isIOS) {
+                downloadButton.textContent = 'Download on the App Store';
+                downloadButton.href = 'https://apps.apple.com/app/id6444385260';
+            } else if (isAndroid) {
+                downloadButton.textContent = 'Get it on Google Play';
+                downloadButton.href = 'https://play.google.com/store/apps/details?id=com.issakaai.base';
+            } else {
+                downloadButton.textContent = 'Download Base';
+                downloadButton.href = '#';
+            }
+
+            if (communityId) {
+                openBase.href = 'base://joinCommunity/' + communityId;
+            } else {
+                openBase.href = 'base://';
+            }
+        });
+    </script>
 </body>
 </html>
