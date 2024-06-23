@@ -41,25 +41,31 @@
         .button {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #4CAF50;
-            color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 10px 0;
         }
-        .button:hover {
+        .primary-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .primary-button:hover {
             background-color: #45a049;
         }
-        .open-app {
+        .secondary-button {
+            background-color: white;
+            color: #4CAF50;
+            border: 2px solid #4CAF50;
+        }
+        .secondary-button:hover {
+            background-color: #f0f8f0;
+        }
+        .download-options {
             margin-top: 30px;
             font-size: 14px;
             color: #666;
-        }
-        .open-app a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -70,9 +76,10 @@
         </div>
         <h1>Welcome to Base</h1>
         <p>Your ultimate community hub. Connect, share, and grow together.</p>
-        <a href="#" class="button" id="downloadButton">Get Started</a>
-        <div class="open-app">
-            Already have Base? <a href="#" id="openBase">Open the app</a>
+        <a href="#" class="button primary-button" id="openBase">Open Base</a>
+        <div class="download-options">
+            <p>Don't have Base yet?</p>
+            <a href="#" class="button secondary-button" id="downloadButton">Get Started</a>
         </div>
     </div>
 
